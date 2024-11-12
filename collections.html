@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snowboard Collection</title>
+  <link rel="stylesheet" href="collections.css">
+  <script defer src="collections.js"></script>
+</head>
+<body>
+
+ <!-- Main Heading with Cart Icon -->
+<header>
+  <h1>Snowboard Collection</h1>
+  <div id="cart-icon" onclick="toggleCart()">
+    🛒<span id="cart-count">0</span>
+  </div>
+</header>
+
+<!-- Subheading and Sorting Bar -->
+<div class="subheading-sorting">
+  <h2>All Collections</h2>
+  <div>
+  <label for="sort-options">Sort by:</label>
+  <select id="sort-options" onchange="sortProducts()">
+    <option value="default">Select</option>
+    <option value="low-to-high">Price: Low to High</option>
+    <option value="high-to-low">Price: High to Low</option>
+  </select>
+</div>
+</div>
+
+<!-- Button to Load Products -->
+<div id="load-button-container">
+  <button id="load-products-button" onclick="loadProducts()">Load Products</button>
+  <div id="loader" class="hidden">Loading...</div>
+</div>
+
+<!-- Product Container -->
+<div id="product-container"></div>
+
+<!-- Cart Container (Hidden initially) -->
+<div id="cart-container" class="hidden">
+  <button id="close-cart" onclick="toggleCart()">✖</button>
+  <h2>Cart</h2>
+  <div id="cart-items"></div>
+  <div id="cart-total">
+    <span>Total:</span>
+    <span id="total-price">₹0.00</span>
+  </div>
+</div>
+
+</body>
+</html>
