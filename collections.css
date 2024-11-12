@@ -163,7 +163,7 @@
   }
   
   .cart-item-title {
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 16px;
   }
   
@@ -258,6 +258,11 @@
     font-size: 0.9em;
   }
 
+  /* cart container  */
+  #cart-container{
+    width: 80%;
+  }
+
   /* Reduce cart icon size */
   #cart-icon {
     font-size: 18px;
@@ -282,8 +287,8 @@
 
   /* Adjust cart item image size */
   .cart-item-image {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
   }
 
   /* Grid layout for products */
